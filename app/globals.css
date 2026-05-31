@@ -5,6 +5,20 @@
   --foreground: #171717;
 }
 
+:root {
+  --color-primary: #DC2626;      /* Red */
+  --color-secondary: #F97316;    /* Orange */
+  --color-dark: #111827;         /* Charcoal */
+  --color-light: #F9FAFB;        /* Off White */
+  --color-gray: #6B7280;         /* Gray */
+}
+@theme {
+  --color-primary: #DC2626;
+  --color-secondary: #F97316;
+  --color-dark: #111827;
+  --color-light: #F9FAFB;
+  --color-gray: #6B7280;
+}
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
