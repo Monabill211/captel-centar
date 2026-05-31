@@ -25,7 +25,7 @@ export default function BooksSection() {
     return books.filter(
       (book) => book.subject === selectedSubject
     );
-  }, [selectedSubject]);
+  }, [books, selectedSubject]);
 
   return (
     <section

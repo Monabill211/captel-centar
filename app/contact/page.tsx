@@ -194,7 +194,6 @@ export default function ContactSection() {
             style={{ padding: "40px" }}
           >
             <motion.h3
-              variants={itemVariants}
               className="font-black text-[#DC2626]"
               style={{ fontSize: "35px", marginBottom: "30px" }}
             >
@@ -208,7 +207,6 @@ export default function ContactSection() {
                   href={item.href}
                   target={item.href.startsWith("http") ? "_blank" : undefined}
                   rel="noopener noreferrer"
-                  variants={itemVariants}
                   whileHover={{ x: -6, transition: { duration: 0.2 } }}
                   className="flex items-center gap-4 bg-white rounded-2xl group cursor-pointer no-underline"
                   style={{ padding: "18px 20px", boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}

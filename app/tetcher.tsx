@@ -24,7 +24,7 @@ export default function TeachersSection() {
 
       return subjectMatch && teacherMatch;
     });
-  }, [selectedSubject, selectedTeacher]);
+  }, [teachers, selectedSubject, selectedTeacher]);
 
   return (
     <section

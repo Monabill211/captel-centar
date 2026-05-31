@@ -12,7 +12,6 @@ export function useCenterStore() {
   }, []);
 
   useEffect(() => {
-    refresh();
     const onUpdate = () => refresh();
     window.addEventListener(STORE_EVENT, onUpdate);
     window.addEventListener("storage", onUpdate);
