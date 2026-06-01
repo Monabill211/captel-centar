@@ -81,8 +81,8 @@ export default function CrudFormModal({
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             style={{
               position: "fixed",
-              top: "50%",
-              left: "50%",
+              top: "5%",
+              left: "25%",
               transform: "translate(-50%, -50%)",
               zIndex: 101,
               background: "#fff",

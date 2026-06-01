@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
 
 export default function HeroPage() {
@@ -95,7 +96,7 @@ export default function HeroPage() {
           }}
         >
           <button
-            className="text-white font-bold rounded-full transition hover:scale-105"
+            className="text-white font-bold rounded-full transition hover:scale-105 cursor-pointer"
             style={{
               background:
                 "linear-gradient(90deg,#DC2626,#F97316)",
@@ -104,15 +105,17 @@ export default function HeroPage() {
           >
             سجل الآن
           </button>
+<Link href={"/About"}>
 
           <button
-            className="bg-white text-gray-900 font-bold rounded-full transition hover:bg-gray-100"
+            className="bg-white text-gray-900 font-bold rounded-full transition hover:bg-gray-100 cursor-pointer"
             style={{
               padding: "14px 35px",
             }}
           >
             تعرف علينا
           </button>
+          </Link>
         </div>
 
         {/* Stats */}

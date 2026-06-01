@@ -235,11 +235,13 @@ export default function Navbar() {
               onClick={() => scrollTo(item.id)}
               className="
               text-right
+                   cursor-pointer
               font-bold
               rounded-xl
               hover:bg-orange-50
               hover:text-[#DC2626]
               transition
+         
               "
               style={{
                 padding: "16px",
@@ -268,6 +270,9 @@ export default function Navbar() {
             bg-gradient-to-r
             from-[#DC2626]
             to-[#F97316]
+            cursor-pointer
+            transition
+            hover:scale-105
             "
             style={{
               padding: "16px",
