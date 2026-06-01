@@ -203,7 +203,6 @@ export default function BookOrderPage() {
                 </span>
               ))}
 
-              {/* Price box */}
               <div style={{
                 marginTop:"20px", padding:"16px", borderRadius:"14px",
                 background:"linear-gradient(135deg,rgba(220,38,38,0.06),rgba(249,115,22,0.06))",
@@ -255,7 +254,6 @@ export default function BookOrderPage() {
               ) : (
                 <motion.div key="form" initial={{ opacity:0 }} animate={{ opacity:1 }}>
 
-                  {/* Step 1 */}
                   <SectionTitle num="١" title="بيانات الطالب" />
                   <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"16px", marginBottom:"28px" }} className="form-grid">
                     <InputField label="اسم الطالب" error={errors.studentName} icon={<PersonIcon />}>
@@ -268,7 +266,6 @@ export default function BookOrderPage() {
 
                   <Divider />
 
-                  {/* Step 2 */}
                   <SectionTitle num="٢" title="بيانات ولي الأمر" />
                   <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"16px", marginBottom:"28px" }} className="form-grid">
                     <InputField label="اسم ولي الأمر" error={errors.parentName} icon={<PersonIcon />}>
@@ -286,7 +283,6 @@ export default function BookOrderPage() {
 
                   <Divider />
 
-                  {/* Step 3 — Payment */}
                   <SectionTitle num="٣" title="طريقة الدفع" />
                   <div style={{ display:"flex", gap:"12px", marginBottom:"16px", flexWrap:"wrap" }}>
                     {paymentOptions.map((opt) => (
@@ -297,14 +293,10 @@ export default function BookOrderPage() {
                         whileTap={{ scale:0.96 }}
                         onClick={() => setPayment(opt.key)}
                         style={{
-                          flex:"1 1 120px",
-                          padding:"14px 12px",
-                          borderRadius:"14px",
+                          flex:"1 1 120px", padding:"14px 12px", borderRadius:"14px",
                           border: form.paymentMethod === opt.key ? `2px solid ${opt.color}` : "2px solid #e5e7eb",
                           background: form.paymentMethod === opt.key ? `${opt.color}12` : "#fafafa",
-                          cursor:"pointer",
-                          display:"flex", flexDirection:"column", alignItems:"center", gap:"6px",
-                          transition:"all 0.2s",
+                          cursor:"pointer", display:"flex", flexDirection:"column", alignItems:"center", gap:"6px", transition:"all 0.2s",
                         }}
                       >
                         <span style={{ fontSize:"1.6rem" }}>{opt.icon}</span>
@@ -320,7 +312,6 @@ export default function BookOrderPage() {
                     </span>
                   )}
 
-                  {/* Payment number box */}
                   <AnimatePresence>
                     {selectedPayment?.needsNumber && (
                       <motion.div
@@ -333,9 +324,7 @@ export default function BookOrderPage() {
                         <div style={{
                           background: `${selectedPayment.color}08`,
                           border: `1.5px solid ${selectedPayment.color}30`,
-                          borderRadius:"14px",
-                          padding:"18px",
-                          marginTop:"4px",
+                          borderRadius:"14px", padding:"18px", marginTop:"4px",
                         }}>
                           <p style={{ fontWeight:700, fontSize:"0.88rem", color: selectedPayment.color, marginBottom:"10px" }}>
                             {selectedPayment.icon} أدخل رقم {selectedPayment.label} اللي دفعت منه
@@ -345,18 +334,10 @@ export default function BookOrderPage() {
                             value={form.paymentNumber}
                             onChange={set("paymentNumber")}
                             style={{
-                              width:"100%",
-                              padding:"12px 16px",
-                              borderRadius:"10px",
+                              width:"100%", padding:"12px 16px", borderRadius:"10px",
                               border: `1.5px solid ${errors.paymentNumber ? "#DC2626" : selectedPayment.color + "50"}`,
-                              outline:"none",
-                              fontSize:"0.95rem",
-                              background:"#fff",
-                              boxSizing:"border-box",
-                              direction:"ltr",
-                              textAlign:"left",
-                              color:"#111",
-                              fontWeight:600,
+                              outline:"none", fontSize:"0.95rem", background:"#fff",
+                              boxSizing:"border-box", direction:"ltr", textAlign:"left", color:"#111", fontWeight:600,
                             }}
                           />
                           {errors.paymentNumber && (
@@ -369,8 +350,6 @@ export default function BookOrderPage() {
                     )}
                   </AnimatePresence>
 
-                  {/* Submit */}
-                  
                   <motion.button
                     whileHover={{ scale:1.02 }} whileTap={{ scale:0.97 }}
                     onClick={handleSubmit}
