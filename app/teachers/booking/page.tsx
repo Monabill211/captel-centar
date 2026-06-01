@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import BookingPage from "./BookingPage";
+import BookingPage from "./booking";
 
 export default function Page() {
   return (
